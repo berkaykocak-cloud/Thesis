@@ -20,6 +20,15 @@ This study aims to predict the converting sessions of an E-commerce company in t
 
 # Requirements
 
+* imblearn
+* matplotlib
+* numpy
+* pandas
+* seaborn
+* sklearn
+* skopt
+* xgboost
+
 # Further Notes
 
 The experiments are conducted on MacOS.. Python 3.7 ...
