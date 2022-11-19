@@ -33,6 +33,8 @@ This study aims to predict the converting sessions of an E-commerce company in t
 
 # Further Notes
 
-The experiments are conducted on MacOS.. Python 3.7 ...
+The experiments are conducted on MacOS 12.3.1 and Python 3.9.7
 
 The data file is not shared along with any preprocessing applied to the dataset due to data privacy concerns. The notebook includes all the methods that are applied and the results that are obtained from these approaches.
+
+For further information you can refer to the [thesis](Thesis_Berkay_Kocak_614468.pdf)
