@@ -4,4 +4,6 @@ This study aims to predict the converting sessions of an E-commerce company in t
 
 # Model Structure
 
+![This is an image](/assets/images/Model_Structure.png)
+
 The data file is not shared along with any preprocessing applied to the dataset due to data privacy concerns. The notebook includes all the methods that are applied and the results that are obtained from these approaches.
