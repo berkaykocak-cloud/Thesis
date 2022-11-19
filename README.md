@@ -44,7 +44,80 @@ param_grid3 = {
 stratified_kfold3 = StratifiedKFold(n_splits=5,
                                        shuffle=True,
                                        random_state=11)
+
+# Grid Search
+grid_search3 = GridSearchCV(estimator=pipeline3,
+                           param_grid=param_grid3,
+                           scoring='average_precision',
+                           cv=stratified_kfold3,
+                           n_jobs=-1,
+                           verbose=0)
                                    
+```
+
+## Example 2: SMOTE + Random Undersampling with Logistic Regression - Grid Search
+
+```
+# Define the pipeline
+pipeline4 = imbpipeline(steps = [['over', SMOTE(random_state=11,sampling_strategy=0.1)],
+                                ['under', RandomUnderSampler(random_state=11,sampling_strategy=0.5)],
+                                ['scaler', StandardScaler()],
+                                ['classifier', LogisticRegression()]])
+
+# Define the parameter grid for Logistic Regression
+param_grid4 = {'classifier__max_iter':[3538],
+              'classifier__random_state':[11],
+              "classifier__penalty": ["l2"],
+              "classifier__C": [911.8],
+              "classifier__fit_intercept": [True]}
+
+# Define the cross validation structure
+stratified_kfold4 = StratifiedKFold(n_splits=5,
+                                       shuffle=True,
+                                       random_state=11)
+
+# Grid Search
+grid_search4 = GridSearchCV(estimator=pipeline4,
+                           param_grid=param_grid4,
+                           scoring='average_precision',
+                           cv=stratified_kfold4,
+                           n_jobs=-1,
+                           verbose=0)
+```
+
+## Example 3: Cost-Sensitive Learning with Extreme Gradient Boosting - Bayesian Search
+
+
+```
+# Define the pipeline
+pipeline20 = imbpipeline(steps = [['scaler', StandardScaler()],
+                                ['classifier', XGBClassifier()]])
+
+# Define the parameter grid for XGB
+
+param_grid20 = {
+    'classifier__objective':['binary:logistic'],
+    'classifier__random_state': [11],
+    'classifier__learning_rate': Real(0.01, 0.2, prior="log-uniform"),
+    'classifier__subsample': Real(0.5, 1),
+    'classifier__colsample_bytree': Real(0.5, 1),
+    'classifier__n_estimators': Integer(1, 5000),
+    'classifier__max_depth': Integer(2, 10),
+    'classifier__scale_pos_weight': Integer(1,400)
+}
+
+# Define the cross validation structure
+stratified_kfold20 = StratifiedKFold(n_splits=5,
+                                       shuffle=True,
+                                       random_state=11)
+
+# Bayesian Search
+grid_search20 = BayesSearchCV(estimator=pipeline20,
+                           search_spaces=param_grid20,
+                           scoring='average_precision',
+                           cv=stratified_kfold20,
+                           n_jobs=-1,
+                           verbose=0)
 ```
 
 # Requirements
