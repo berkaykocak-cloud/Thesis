@@ -12,9 +12,11 @@ This study aims to predict the converting sessions of an E-commerce company in t
 
 # Model Structure
 
-![This is an image](Model_Structure.png)
+![Model Structure](Model_Structure.png)
 
 # Methods and Algorithms
+
+![Methods Algorithms](Methods_Algorithms.png)
 
 # Examples
 
