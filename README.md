@@ -1,9 +1,27 @@
-# Thesis
+# Introduction
 
-This study aims to predict the converting sessions of an E-commerce company in the automotive sector. The main challenge that this study addresses is the severe class imbalance in an E-commerce setting.  The methods that are applied are of two families. Data level methods include oversampling, undersampling and hybrid sampling. Algorithm level methods compose of cost sensitive learning and thresholding. The comparative analysis shows that cost sensitive learning combined with XGBoost shows the highest performance in terms of Average Precision and PR AUC on the train and the test set. Further thresholding is applied to optimize the confusion matrix and obtain the best f1 score via increasing Precision and Recall for this model.
+This study aims to predict the converting sessions of an E-commerce company in the automotive sector. The main challenge that this study addresses is the severe class imbalance.  
+
+
+* This project offers the implementation of 6 methods against class imbalance combined with 3 different algorithms.
+* The methods that are applied are of two familes; Data Level Methods & Algorithm Level Methods.
+* The study uses Average Precision and PR AUC as the main performance metrics for comparison. F1 Score, Precision and Recall are also analysed for the best performing algorithm.
+* A two step hyperparameter tuning approach is conducted which includes Bayesian Search and Grid Search.
+* Bayesian Search is applied to only Random Undersampling and Cost Sensitive Learning due to time constraints.
+* Further thresholding is applied to only best performing method-algorithm combination which is cost sensitive learning combined with XGBoost.
 
 # Model Structure
 
 ![This is an image](Model_Structure.png)
+
+# Methods and Algorithms
+
+# Examples
+
+# Requirements
+
+# Further Notes
+
+The experiments are conducted on MacOS.. Python 3.7 ...
 
 The data file is not shared along with any preprocessing applied to the dataset due to data privacy concerns. The notebook includes all the methods that are applied and the results that are obtained from these approaches.
