@@ -24,20 +24,20 @@ This study aims to predict the converting sessions of an E-commerce company in t
 
 ```
 # Define the pipeline
-pipeline3 = imbpipeline(steps = [*['smote', SMOTE(random_state=11)]*,
+pipeline3 = imbpipeline(steps = [['smote', SMOTE(random_state=11)],
                                 ['scaler', StandardScaler()],
-                                *['classifier', RandomForestClassifier()]*])
+                                ['classifier', RandomForestClassifier()]])
 
 # Define the parameter grid for RF
 
-*param_grid3 = {
+param_grid3 = {
     'classifier__random_state': [11],
     'classifier__max_depth': [10] ,
     'classifier__n_estimators': [5000],
     'classifier__max_features': [20,None],
     'classifier__bootstrap': [False]
     
-}*
+}
 
 
 # Define the cross validation structure
