@@ -138,4 +138,4 @@ The data file is not shared along with any preprocessing applied to the dataset 
 
 For the full code you can refer to [here](Thesis_Final.ipynb). The table of contents in the notebook becomes interactable when opened with Jupyter Notebook. 
 
-For further information you can refer to the [here](Thesis_Berkay_Kocak_614468.pdf). 
+For further information you can refer to [here](Thesis_Berkay_Kocak_614468.pdf). 
