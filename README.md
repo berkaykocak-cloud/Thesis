@@ -137,6 +137,6 @@ The experiments are conducted on MacOS 12.3.1 and Python 3.9.7
 
 The data file is not shared along with any preprocessing applied to the dataset due to data privacy concerns. The notebook includes all the methods that are applied and the results that are obtained from these approaches.
 
-For the full code you can refer to [here](Thesis_Final.ipynb).
+For the full code you can refer to [here](Thesis_Final.ipynb). The table of contents in the notebook becomes interactable when opened with Jupyter Notebook. 
 
 For further information you can refer to the [here](Thesis_Berkay_Kocak_614468.pdf). 
